@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager,\
                                         PermissionsMixin
 from django.conf import settings
 
+
 class UserManager(BaseUserManager):
 
     def create_user(self, email, password=None, **extra_fields):
@@ -45,6 +46,7 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Ingredient(models.Model):
     """Ingrediente to be used in recipe"""
